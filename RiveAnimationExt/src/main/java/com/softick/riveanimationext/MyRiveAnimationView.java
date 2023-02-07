@@ -1,4 +1,4 @@
-package com.softick.riveanimationextexample;
+package com.softick.riveanimationext;
 
 import android.content.Context;
 import android.util.AttributeSet;
