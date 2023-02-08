@@ -18,7 +18,7 @@ import app.rive.runtime.kotlin.core.Direction;
 import app.rive.runtime.kotlin.core.Fit;
 import app.rive.runtime.kotlin.core.Loop;
 
-public class RiveAnimation
+public class RiveAnimationJava
 {
     int ANIMATIONDELAY_VICTORY     = 666;
 
@@ -26,9 +26,9 @@ public class RiveAnimation
     FrameLayout frameLayout;
     Handler handlerAnim;
 
-    ArrayList<MyRiveAnimationView> animList;
+    ArrayList<MyRiveAnimationViewJava> animList;
 
-    public RiveAnimation(Context context)
+    public RiveAnimationJava(Context context)
     {
         ctx = context;
         handlerAnim = new Handler();
@@ -70,7 +70,7 @@ public class RiveAnimation
         //clear previous?
         if (animParams.length < 6) return;
 
-        MyRiveAnimationView anim = new MyRiveAnimationView(ctx, null);
+        MyRiveAnimationViewJava anim = new MyRiveAnimationViewJava(ctx, null);
         frameLayout.addView(anim);
 
         setViewMetrics(anim, animParams[0], animParams[1], animParams[2], animParams[3], animParams[4], animParams[5]);
@@ -94,7 +94,7 @@ public class RiveAnimation
 
         for (int i = 0; i < count; i++)
         {
-            MyRiveAnimationView anim = new MyRiveAnimationView(ctx, null);
+            MyRiveAnimationViewJava anim = new MyRiveAnimationViewJava(ctx, null);
             frameLayout.addView(anim);
 
             int marginStart = rand.nextInt(screenWidth - animWidth);
@@ -123,7 +123,7 @@ public class RiveAnimation
             int rand2 = rand.nextInt(animList.size());
             if (rand1 != rand2) {
                 //swap rand1 and rand2 elements of the animation list
-                MyRiveAnimationView tmpView = animList.get(rand1);
+                MyRiveAnimationViewJava tmpView = animList.get(rand1);
                 animList.set(rand1, animList.get(rand2));
                 animList.set(rand2, tmpView);
             }

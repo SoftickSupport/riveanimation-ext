@@ -14,7 +14,7 @@ import app.rive.runtime.kotlin.core.Fit
 import app.rive.runtime.kotlin.core.Loop
 import java.util.*
 
-class RiveAnimationKt
+class RiveAnimation
 {
     var ANIMATIONDELAY_VICTORY = 666
 
@@ -22,13 +22,13 @@ class RiveAnimationKt
     var frameLayout: FrameLayout? = null
     var handlerAnim: Handler? = null
 
-    var animList: ArrayList<MyRiveAnimationViewKt>? = null
+    var animList: ArrayList<MyRiveAnimationView>? = null
 
     constructor (context: Context)
     {
         ctx = context
         handlerAnim = Handler()
-        animList = ArrayList<MyRiveAnimationViewKt>()
+        animList = ArrayList<MyRiveAnimationView>()
         frameLayout = FrameLayout(ctx!!)
         val layoutparams = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         frameLayout!!.setLayoutParams(layoutparams)
@@ -64,7 +64,7 @@ class RiveAnimationKt
 
         //clear previous?
         if (animParams.size < 6) return
-        val anim = MyRiveAnimationViewKt(ctx!!, null)
+        val anim = MyRiveAnimationView(ctx!!, null)
         frameLayout!!.addView(anim)
 
         setViewMetrics(anim, animParams[0], animParams[1], animParams[2], animParams[3], animParams[4], animParams[5])
@@ -84,7 +84,7 @@ class RiveAnimationKt
         val rand = Random()
 
         for (i in 0 until count) {
-            val anim = MyRiveAnimationViewKt(ctx!!, null)
+            val anim = MyRiveAnimationView(ctx!!, null)
             frameLayout!!.addView(anim)
             val marginStart = rand.nextInt(screenWidth - animWidth)
             val marginTop = rand.nextInt(screenHeight - animHeight)

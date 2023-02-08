@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 
 import app.rive.runtime.kotlin.RiveAnimationView;
 
-public class MyRiveAnimationView extends RiveAnimationView {
-    public MyRiveAnimationView(@NonNull Context context, @Nullable AttributeSet attrs) {
+public class MyRiveAnimationViewJava extends RiveAnimationView {
+    public MyRiveAnimationViewJava(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 

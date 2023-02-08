@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import app.rive.runtime.kotlin.RiveAnimationView
 
-open class MyRiveAnimationViewKt(context: Context, attrs: AttributeSet?) : RiveAnimationView(context, attrs)
+open class MyRiveAnimationView(context: Context, attrs: AttributeSet?) : RiveAnimationView(context, attrs)
 {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         return false
