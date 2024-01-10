@@ -128,6 +128,7 @@ class RiveAnimation
 
     fun play()
     {
+        try{
         for (i in animList!!.indices)
         {
             val anim: RiveAnimationView = animList!![i]
@@ -136,6 +137,10 @@ class RiveAnimation
                 anim.play(Loop.ONESHOT, Direction.AUTO, true)
             }
             handlerAnim!!.postDelayed(r, i.toLong() * ANIMATIONDELAY_VICTORY)
+        }
+        }
+        catch (e: Exception)
+        {
         }
     }
 
